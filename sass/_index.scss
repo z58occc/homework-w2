@@ -1,0 +1,61 @@
+.h1 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.2;
+}
+.product {
+  width: 196px;
+  margin-right: 24px;
+  .product-list {
+    .all-product {
+      width: 172px;
+      padding: 8px 0;
+      margin-bottom: 28px;
+      color: #57a203;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+    .product-item {
+      width: 172px;
+      padding: 12px 0;
+      margin-bottom: 16px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+  }
+}
+.wrap {
+  flex-wrap: wrap;
+  gap: 48px 24px;
+  margin-bottom: 48px;
+  .card {
+    width: 342.67px;
+    .product-img {
+      width: 100%;
+      margin-bottom: 12px;
+    }
+    .type {
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+    .price {
+      font-weight: 500;
+      line-height: 1.5;
+    }
+  }
+}
+.pages-nums {
+  justify-content: center;
+  .active {
+    background: #c0fa73;
+  }
+  .pages-num {
+    font-weight: 500;
+    width: 40px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    padding: 12px 0;
+  }
+}

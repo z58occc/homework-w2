@@ -1,0 +1,114 @@
+.product-pics {
+  width: 746px;
+  flex-wrap: wrap;
+  gap: 8px;
+  .product-pic {
+    max-width: 369px;
+  }
+}
+.aside {
+  width: 526px;
+  .h1 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  .new-price {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #57a203;
+    margin-right: 8px;
+  }
+  .old-price {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #adb5bd;
+    text-decoration: line-through;
+  }
+  .small-pic {
+    width: 64px;
+    margin-right: 8px;
+  }
+  .sizes {
+    flex-wrap: wrap;
+    gap: 8px;
+    .size {
+      width: 160px;
+      box-sizing: border-box;
+      padding: 12px 24px;
+      border: #dee2e6 1px solid;
+      border-radius: 4px;
+      text-align: center;
+    }
+    .size-active {
+      border: #212529 1px solid;
+    }
+    .size-disabled {
+      color: #adb5bd;
+    }
+  }
+  .hint {
+    color: #d74f4f;
+    font-size: 14px;
+  }
+  .add-to-fav {
+    padding: 12px 82px;
+    border: #212529 1px solid;
+    border-radius: 4px;
+    background: white;
+    line-height: 1.5;
+    font-weight: 500;
+    font-size: 16px;
+    margin-right: 8px;
+    .bi-heart {
+      font-size: 20px;
+      margin-right: 2px;
+    }
+  }
+  .try-on {
+    font-weight: 500;
+    line-height: 1.5;
+    font-size: 16px;
+    background: #000;
+    color: white;
+    border: #212529 1px solid;
+    border-radius: 4px;
+    padding: 12px 65.5px;
+    .bi-handbag {
+      font-size: 20px;
+      margin-right: 2px;
+    }
+  }
+  .h3 {
+    line-height: 1.5;
+    font-weight: 500;
+  }
+  .direction {
+    line-height: 1.5;
+    color: #6c757d;
+    padding-bottom: 12px;
+    border-bottom: #dee2e6 1px solid;
+  }
+}
+.other-products {
+  .h2 {
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: 24px;
+    padding: 9.5px 0;
+  }
+  .products {
+    gap: 24px;
+    .card {
+      width: 306px;
+      .type {
+        font-weight: 700;
+        line-height: 1.2;
+      }
+      .price {
+        line-height: 1.5;
+      }
+    }
+  }
+}
