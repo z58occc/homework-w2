@@ -1,79 +1,89 @@
-nav{
+nav {
   padding: 28px 0;
-  .logo{
+  .logo {
+    // position: relative;
     font-weight: 700;
     padding: 8px 12px;
     font-size: 20px;
-    line-height: 1.5;
+    .deco {
+      position: absolute;
+      top: 5px;
+      right: -1px;
+      z-index: -1;
+      background: #c0fa73;
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+    }
   }
-  .nav-item{
+  .nav-item {
     font-weight: 500;
     padding: 12px 0;
-    line-height: 1.5;
   }
-  .bi-person{
+  .bi-person {
     font-size: 18px;
+    &:hover{
+      color: #57A203;
+    }
   }
 }
 .bread-crumb {
   .bread-first {
     font-weight: 500;
-    line-height: 1.5;
     color: #6c757d;
   }
-  .bread-slash {
-    color: #dee2e6;
-    margin: 0 12px;
+  li + li::before {
+    content: "/";
+    margin: 0 8px;
+    color: #999;
   }
   .bread-active {
     font-weight: 500;
-    line-height: 1.5;
     color: #212529;
   }
 }
-.footer{
+.footer {
   padding-top: 48px;
-  .ad{
+  .ad {
     font-weight: 700;
     font-size: 24px;
     line-height: 1.2;
-    background: #E8FEC5;
+    background: #e8fec5;
     padding: 33.5px 0;
     justify-content: center;
     align-items: center;
     margin-bottom: 64px;
-    .sign{
+    .sign {
       padding: 12px 24px;
       background: #212529;
       color: white;
       font-weight: 500;
-      line-height: 1.5;
       border-radius: 4px;
       margin-left: 24px;
+      &:hover{
+        background: #495057;
+      }
     }
   }
-  .footer-list{
+  .footer-list {
     justify-content: space-between;
     margin-bottom: 24px;
-    .logo{
+    .logo {
       font-weight: 700;
       padding: 8px 12px;
       font-size: 20px;
-      line-height: 1.5;
     }
-    .nav-item{
+    .nav-item {
       font-weight: 500;
       padding: 12px 0;
-      line-height: 1.5;
     }
   }
-  .copy-right{
-    border-top: 1px solid #DEE2E6;
+  .copy-right {
+    border-top: 1px solid #dee2e6;
     font-size: 14px;
-    line-height: 1.5;
     padding-top: 32px;
     text-align: center;
-    color: #6C757D;
+    color: #6c757d;
     margin-bottom: 64px;
   }
 }

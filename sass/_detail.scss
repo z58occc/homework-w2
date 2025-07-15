@@ -6,7 +6,7 @@
     max-width: 369px;
   }
 }
-.aside {
+.right {
   width: 526px;
   .h1 {
     font-weight: 700;
@@ -22,13 +22,18 @@
   }
   .old-price {
     font-size: 14px;
-    line-height: 1.5;
     color: #adb5bd;
     text-decoration: line-through;
   }
   .small-pic {
     width: 64px;
     margin-right: 8px;
+    cursor: pointer;
+    &:hover{
+      img{
+        opacity: 0.8;
+      }
+    }
   }
   .sizes {
     flex-wrap: wrap;
@@ -40,6 +45,12 @@
       border: #dee2e6 1px solid;
       border-radius: 4px;
       text-align: center;
+      cursor: pointer;
+      transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;;
+      &:hover{
+        border: solid 1px #6C757D;
+        opacity: 1;
+      }
     }
     .size-active {
       border: #212529 1px solid;
@@ -57,10 +68,13 @@
     border: #212529 1px solid;
     border-radius: 4px;
     background: white;
-    line-height: 1.5;
     font-weight: 500;
     font-size: 16px;
     margin-right: 8px;
+    &:hover{
+      background: #212529;
+      color: white;
+    }
     .bi-heart {
       font-size: 20px;
       margin-right: 2px;
@@ -68,7 +82,6 @@
   }
   .try-on {
     font-weight: 500;
-    line-height: 1.5;
     font-size: 16px;
     background: #000;
     color: white;
@@ -81,11 +94,9 @@
     }
   }
   .h3 {
-    line-height: 1.5;
     font-weight: 500;
   }
   .direction {
-    line-height: 1.5;
     color: #6c757d;
     padding-bottom: 12px;
     border-bottom: #dee2e6 1px solid;
@@ -105,9 +116,6 @@
       .type {
         font-weight: 700;
         line-height: 1.2;
-      }
-      .price {
-        line-height: 1.5;
       }
     }
   }

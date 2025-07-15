@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -59,29 +60,39 @@ nav .logo {
   font-weight: 700;
   padding: 8px 12px;
   font-size: 20px;
-  line-height: 1.5;
+}
+nav .logo .deco {
+  position: absolute;
+  top: 5px;
+  right: -1px;
+  z-index: -1;
+  background: #c0fa73;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
 }
 nav .nav-item {
   font-weight: 500;
   padding: 12px 0;
-  line-height: 1.5;
 }
 nav .bi-person {
   font-size: 18px;
 }
+nav .bi-person:hover {
+  color: #57A203;
+}
 
 .bread-crumb .bread-first {
   font-weight: 500;
-  line-height: 1.5;
   color: #6c757d;
 }
-.bread-crumb .bread-slash {
-  color: #dee2e6;
-  margin: 0 12px;
+.bread-crumb li + li::before {
+  content: "/";
+  margin: 0 8px;
+  color: #999;
 }
 .bread-crumb .bread-active {
   font-weight: 500;
-  line-height: 1.5;
   color: #212529;
 }
 
@@ -92,7 +103,7 @@ nav .bi-person {
   font-weight: 700;
   font-size: 24px;
   line-height: 1.2;
-  background: #E8FEC5;
+  background: #e8fec5;
   padding: 33.5px 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -107,9 +118,11 @@ nav .bi-person {
   background: #212529;
   color: white;
   font-weight: 500;
-  line-height: 1.5;
   border-radius: 4px;
   margin-left: 24px;
+}
+.footer .ad .sign:hover {
+  background: #495057;
 }
 .footer .footer-list {
   -webkit-box-pack: justify;
@@ -121,26 +134,27 @@ nav .bi-person {
   font-weight: 700;
   padding: 8px 12px;
   font-size: 20px;
-  line-height: 1.5;
 }
 .footer .footer-list .nav-item {
   font-weight: 500;
   padding: 12px 0;
-  line-height: 1.5;
 }
 .footer .copy-right {
-  border-top: 1px solid #DEE2E6;
+  border-top: 1px solid #dee2e6;
   font-size: 14px;
-  line-height: 1.5;
   padding-top: 32px;
   text-align: center;
-  color: #6C757D;
+  color: #6c757d;
   margin-bottom: 64px;
 }
 
 .container {
   width: 1296px;
   margin: 0 auto;
+}
+
+.position-relative {
+  position: relative;
 }
 
 .d-flex {
@@ -159,10 +173,6 @@ nav .bi-person {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.lh-1 {
-  line-height: 1.5;
 }
 
 .text-center {
@@ -217,12 +227,22 @@ nav .bi-person {
   padding-top: 48px;
 }
 
+.text-primary {
+  color: #57a203;
+}
+
 .text-second {
-  color: #6C757D;
+  color: #6c757d;
+}
+
+.active {
+  color: #57a203;
 }
 
 body {
-  letter-spacing: 5%;
+  font-family: "Noto Sans TC", sans-serif;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
 }
 body img {
   display: block;
@@ -231,6 +251,10 @@ body img {
 body a {
   text-decoration: none;
   color: black;
+}
+body button {
+  cursor: pointer;
+  font: inherit;
 }
 
 .h1 {
@@ -249,14 +273,12 @@ body a {
   margin-bottom: 28px;
   color: #57a203;
   font-weight: 500;
-  line-height: 1.5;
 }
 .product .product-list .product-item {
   width: 172px;
   padding: 12px 0;
   margin-bottom: 16px;
   font-weight: 500;
-  line-height: 1.5;
 }
 
 .wrap {
@@ -267,6 +289,15 @@ body a {
 }
 .wrap .card {
   width: 342.67px;
+  -webkit-transition: opacity 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, opacity 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+}
+.wrap .card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05); /* 變大 */
+  opacity: 1; /* 淡入 */
 }
 .wrap .card .product-img {
   width: 100%;
@@ -279,13 +310,13 @@ body a {
 }
 .wrap .card .price {
   font-weight: 500;
-  line-height: 1.5;
 }
 
 .pages-nums {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
 }
 .pages-nums .active {
   background: #c0fa73;
@@ -294,9 +325,11 @@ body a {
   font-weight: 500;
   width: 40px;
   font-size: 16px;
-  line-height: 1.5;
   text-align: center;
   padding: 12px 0;
+}
+.pages-nums .pages-num:hover {
+  background: #F8F9FA;
 }
 
 .product-pics {
@@ -309,37 +342,40 @@ body a {
   max-width: 369px;
 }
 
-.aside {
+.right {
   width: 526px;
 }
-.aside .h1 {
+.right .h1 {
   font-weight: 700;
   font-size: 32px;
   line-height: 1.2;
 }
-.aside .new-price {
+.right .new-price {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.2;
   color: #57a203;
   margin-right: 8px;
 }
-.aside .old-price {
+.right .old-price {
   font-size: 14px;
-  line-height: 1.5;
   color: #adb5bd;
   text-decoration: line-through;
 }
-.aside .small-pic {
+.right .small-pic {
   width: 64px;
   margin-right: 8px;
+  cursor: pointer;
 }
-.aside .sizes {
+.right .small-pic:hover img {
+  opacity: 0.8;
+}
+.right .sizes {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 8px;
 }
-.aside .sizes .size {
+.right .sizes .size {
   width: 160px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -347,34 +383,45 @@ body a {
   border: #dee2e6 1px solid;
   border-radius: 4px;
   text-align: center;
+  cursor: pointer;
+  -webkit-transition: opacity 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, opacity 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
 }
-.aside .sizes .size-active {
+.right .sizes .size:hover {
+  border: solid 1px #6C757D;
+  opacity: 1;
+}
+.right .sizes .size-active {
   border: #212529 1px solid;
 }
-.aside .sizes .size-disabled {
+.right .sizes .size-disabled {
   color: #adb5bd;
 }
-.aside .hint {
+.right .hint {
   color: #d74f4f;
   font-size: 14px;
 }
-.aside .add-to-fav {
+.right .add-to-fav {
   padding: 12px 82px;
   border: #212529 1px solid;
   border-radius: 4px;
   background: white;
-  line-height: 1.5;
   font-weight: 500;
   font-size: 16px;
   margin-right: 8px;
 }
-.aside .add-to-fav .bi-heart {
+.right .add-to-fav:hover {
+  background: #212529;
+  color: white;
+}
+.right .add-to-fav .bi-heart {
   font-size: 20px;
   margin-right: 2px;
 }
-.aside .try-on {
+.right .try-on {
   font-weight: 500;
-  line-height: 1.5;
   font-size: 16px;
   background: #000;
   color: white;
@@ -382,16 +429,14 @@ body a {
   border-radius: 4px;
   padding: 12px 65.5px;
 }
-.aside .try-on .bi-handbag {
+.right .try-on .bi-handbag {
   font-size: 20px;
   margin-right: 2px;
 }
-.aside .h3 {
-  line-height: 1.5;
+.right .h3 {
   font-weight: 500;
 }
-.aside .direction {
-  line-height: 1.5;
+.right .direction {
   color: #6c757d;
   padding-bottom: 12px;
   border-bottom: #dee2e6 1px solid;
@@ -412,7 +457,4 @@ body a {
 .other-products .products .card .type {
   font-weight: 700;
   line-height: 1.2;
-}
-.other-products .products .card .price {
-  line-height: 1.5;
 }/*# sourceMappingURL=all.css.map */
